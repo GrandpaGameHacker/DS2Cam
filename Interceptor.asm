@@ -44,10 +44,10 @@ EXTERN _cameraEnabled: byte
 EXTERN _cameraStructInterceptionContinue: qword
 EXTERN _cameraWriteInterceptionContinue1: qword
 
-;DarkSoulsII.exe+1F1A4E - 0F28 81 A0010000      - movaps xmm0,[rcx+000001A0]
-;DarkSoulsII.exe+1F1A55 - 48 89 9C 24 80000000  - mov [rsp+00000080],rbx
-;DarkSoulsII.exe+1F1A5D - 48 8B 5F 08           - mov rbx,[rdi+08]
-;DarkSoulsII.exe+1F1A61 - 66 0F7F 44 24 20      - movdqa [rsp+20],xmm0
+;DarkSoulsII.exe+1F521E - 0F28 81 A0010000      - movaps xmm0,[rcx+000001A0]
+;DarkSoulsII.exe+1F5225 - 48 89 9C 24 80000000  - mov [rsp+00000080],rbx
+;DarkSoulsII.exe+1F522D - 48 8B 5F 08           - mov rbx,[rdi+08]
+;DarkSoulsII.exe+1F5231 - 66 0F7F 44 24 20      - movdqa [rsp+20],xmm0
 .code 
 cameraAddressInterceptor PROC
 	mov [_cameraStructAddress], rcx						; intercept address of camera struct
@@ -64,15 +64,15 @@ cameraAddressInterceptor ENDP
 
 
 ;CameraInterceptLocation
-;DarkSoulsII.exe+AE07E0 - 0F 28 02               - movaps xmm0,[rdx]
-;DarkSoulsII.exe+AE07E3 - 66 0F 7F 01            - movdqa [rcx],xmm0
-;DarkSoulsII.exe+AE07E7 - 0F 28 4A 10            - movaps xmm1,[rdx+10]
-;DarkSoulsII.exe+AE07EB - 66 0F 7F 49 10         - movdqa [rcx+10],xmm1
-;DarkSoulsII.exe+AE07F0 - 0F28 42 20            - movaps xmm0,[rdx+20]
-;DarkSoulsII.exe+AE07F4 - 66 0F7F 41 20         - movdqa [rcx+20],xmm0
-;DarkSoulsII.exe+AE07F9 - 0F28 4A 30            - movaps xmm1,[rdx+30]
-;DarkSoulsII.exe+AE07FD - 66 0F7F 49 30         - movdqa [rcx+30],xmm1
-;DarkSoulsII.exe+AE0802 - C3                    - ret 
+;DarkSoulsII.exe+AE7DC3 - 66 0F7F 01            - movdqa [rcx],xmm0
+;DarkSoulsII.exe+AE7DC7 - 0F28 4A 10            - movaps xmm1,[rdx+10]
+;DarkSoulsII.exe+AE7DCB - 66 0F7F 49 10         - movdqa [rcx+10],xmm1
+;DarkSoulsII.exe+AE7DD0 - 0F28 42 20            - movaps xmm0,[rdx+20]
+;DarkSoulsII.exe+AE7DD4 - 66 0F7F 41 20         - movdqa [rcx+20],xmm0
+;DarkSoulsII.exe+AE7DD9 - 0F28 4A 30            - movaps xmm1,[rdx+30]
+;DarkSoulsII.exe+AE7DDD - 66 0F7F 49 30         - movdqa [rcx+30],xmm1
+;DarkSoulsII.exe+AE7DE2 - C3                    - ret 
+
 cameraWriteInterceptor1 PROC
 	cmp byte ptr [_cameraEnabled], 1					; check if the user enabled the camera. If so, just skip the write statements, otherwise just execute the original code.
 	je exit												; our own camera is enabled, just skip the writes

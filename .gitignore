@@ -40,3 +40,14 @@
 *.pdb
 *.log
 *.tlog
+.vs/InjectableGenericCameraSystem/FileContentIndex/f3064529-7ad9-4fc6-912f-dd388da63cb9.vsidx
+.vs/InjectableGenericCameraSystem/FileContentIndex/read.lock
+.vs/InjectableGenericCameraSystem/v17/Browse.VC.db-shm
+.vs/InjectableGenericCameraSystem/v17/Browse.VC.db-wal
+.vs/InjectableGenericCameraSystem/v17/Browse.VC.opendb
+x64/Debug/vc143.idb
+x64/Debug/DarkSoulsII_CameraTools.dll.recipe
+x64/Debug/DarkSoulsII_CameraTools.ilk
+x64/Debug/InjectableGenericCameraSystem.vcxproj.FileListAbsolute.txt
+x64/Release/DarkSoulsII_CameraTools.dll.recipe
+x64/Release/InjectableGenericCameraSystem.vcxproj.FileListAbsolute.txt
